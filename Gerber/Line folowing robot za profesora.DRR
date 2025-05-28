@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Line folowing robot za profesora.PcbDoc   10/11/2024  12:08:31 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Line folowing robot za profesora.TXT
+EIA File   : Line folowing robot za profesora.DRL
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      28mil (0.711mm)                                           Round             13        PTH        4.43inch (112.61mm)
+T2      31mil (0.787mm)                                           Round             24        PTH        8.70inch (220.95mm)
+T3      33mil (0.838mm)                                           Round             14        PTH        1.75inch (44.45mm)
+T4      35mil (0.889mm)                                           Round             20        PTH        2.71inch (68.95mm)
+T5      37mil (0.94mm)                                            Round             6         PTH        2.15inch (54.65mm)
+T6      39mil (0.991mm)                                           Round             12        PTH        1.93inch (49.01mm)
+T7      41mil (1.041mm)                                           Round             11        PTH        4.70inch (119.50mm)
+T8      125mil (3.175mm)                                          Round             4         PTH        9.02inch (229.17mm)
+T9      39mil (0.991mm)                                           Round             3         NPTH       1.36inch (34.61mm)
+T10     98mil (2.489mm)                                           Round             6         NPTH       1.46inch (37.13mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              113
+
+Total Processing Time (hh:mm:ss) : 00:00:00
