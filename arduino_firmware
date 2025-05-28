@@ -1,0 +1,107 @@
+
+// Motor A connections
+int enA = 10;  //left 
+int in1 = 7;
+int in2 = 13;
+
+// Motor B connections
+int enB = 2;  //right
+int in3 = 3;
+int in4 = 8;
+int L_S = true;
+int R_S = true;
+int S_S = true;
+int state;
+
+void setup() {
+
+  pinMode(enA, OUTPUT);
+  pinMode(enB, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+
+  // Turn off motors - Initial state
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+
+  // Enable UART for Debugging
+  Serial.begin(9600);
+}
+void loop() {
+  //state of the sensor
+  if (analogRead(A2) > 500)
+    L_S = true;
+  else
+    L_S = false;
+  if (analogRead(A1) > 500)
+    S_S = true;
+  else
+    S_S = false;
+  if (analogRead(A0) > 500)
+    R_S = true;
+  else
+    R_S = false;
+  if (L_S == true)
+    turnLeft();
+  else if (R_S == true)
+    turnRight();
+  else if (S_S == true)
+    forword();
+ 
+ void directionControl() {
+  // Set motors to maximum speed
+  // For PWM maximum possible values are 0 to 255
+  analogWrite(enA, 125);
+  analogWrite(enB, 125);
+
+  // Turn on motor A & B
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);  //backwards left
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);  //backwards desni
+  //delay(2000);
+
+  //Now change motor directions
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);  //forward left
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);  //forward right
+  //delay(2000);
+
+  // Turn off motors
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+void forword() {
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);  //forward left
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);  //forward right
+}
+
+void turnRight() {
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  digitalWrite(in4, HIGH);
+  digitalWrite(in3, HIGH);  //right stop
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);  //forward left
+}
+
+void turnLeft() {
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  digitalWrite(in4, LOW);
+  digitalWrite(in3, HIGH);  //right stop
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, HIGH);  //left stop
+}
+}
