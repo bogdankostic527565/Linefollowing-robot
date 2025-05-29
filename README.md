@@ -1,14 +1,14 @@
 # Linefollowing_robot
 
-This is a custom-designed PCB for a small differential-drive mobile robot.  
-The board includes support for a microcontroller (e.g. STM32 or ESP32, arduino), motor driver, sensor inputs.
+This is a custom-designed PCB for linefollowing robot.  
+The board includes support for a microcontroller (e.g. STM32, arduino), motor driver, sensor inputs.
 
 ## 🔧 Features
 
-- Microcontroller support: **STM32F103 / Arduino*
+- Microcontroller support:  AVR (ATmega328P, ATmega2560...); ARM Cortex-M
 - Motor control: Dual H-bridge driver L293N 
-- Voltage regulation: 5V external DC-DC buck converter
-- IR sensor TCTR5000
+- Voltage regulation: 12v -> 5V external DC-DC buck converter
+- IR sensors TCTR5000
 - Power input: 12V 10A DC (3S1P external supply)
 - Compact 2-layer PCB design (in Altium)
 
