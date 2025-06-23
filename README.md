@@ -17,11 +17,6 @@ The board includes support for a microcontroller (e.g. STM32, arduino), motor dr
 - *Altium Designer** – schematic and PCB layout
 - ** Arduino IDE** – firmware development
 
-## 📌 Notes
-
-- Designed for educational purposes and personal prototyping
-- You can use or modify this project freely (MIT license)
-
 ## 📫 Contact
 
 For questions or collaboration:  
